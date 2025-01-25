@@ -1,0 +1,29 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# Ignore environment variable files
+.env
+
+# Ignore compiled PHP files
+*.php~
+
+# Ignore Composer dependencies
+/vendor/
+
+# Ignore Docker files
+docker-compose.override.yml
+docker-compose.override.yaml
+docker/nginx/conf.d/default.conf
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
