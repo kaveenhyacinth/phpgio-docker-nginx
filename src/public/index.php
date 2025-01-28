@@ -1,2 +1,3 @@
 <?php
-	echo "Hello World!";
+	const WELCOME_MESSAGE = "Hello World!";
+	echo WELCOME_MESSAGE;
