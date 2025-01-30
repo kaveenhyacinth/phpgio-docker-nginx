@@ -8,4 +8,6 @@ RUN apk update && apk add --no-cache \
     zip \
     unzip
 
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
 WORKDIR /var/www

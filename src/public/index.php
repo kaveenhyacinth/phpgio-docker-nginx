@@ -1,11 +1,14 @@
 <?php
 
-    require_once __DIR__ . '/../app/PaymentGateway/Paddle/Transaction.php';
-    require_once __DIR__ . '/../app/PaymentGateway/Stripe/Transaction.php';
+    require_once __DIR__ . '/../vendor/autoload.php';
 
-    use App\PaymentGateways\Paddle\Transaction as PaddleTransaction;
-    use App\PaymentGateways\Stripe\Transaction as StripeTransaction;
+    use App\Enums\TransactionStatus;
+    use App\PaymentGateway\Paddle\Transaction;
+    use Ramsey\Uuid\UuidFactory;
 
-    $stripe = new StripeTransaction();
-    echo '<br>';
-    $paddle = new PaddleTransaction();
+    $id = new UuidFactory();
+
+    echo $id->uuid4() . '<br />';
+
+    $paddleTransaction = new Transaction();
+    $paddleTransaction->setStatus(TransactionStatus::PENDING);
